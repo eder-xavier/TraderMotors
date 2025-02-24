@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Trader Motors</title>
+    <link rel="stylesheet" href="{% static 'css/home/base.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'MainTM:home' %}">Início</a>
+        <a href="{% url 'MainTM:register' %}">Registrar</a>
+        <a href="{% url 'MainTM:login' %}">Entrar</a>
+    </nav>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
