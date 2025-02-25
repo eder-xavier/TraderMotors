@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ vehicle.brand }} {{ vehicle.model }} ({{ vehicle.year }})</h1>
+
+<h2>Peças Compatíveis</h2>
+<ul>
+    {% for part in parts %}
+        <li>{{ part.part_name }} - <a href="#">Ver detalhes</a></li>
+    {% endfor %}
+</ul>
+
+<h2>Recomendações Baseadas em IA</h2>
+<ul>
+    {% for part in recommended_parts %}
+        <li>{{ part }} - <a href="#">Ver mais</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,30 @@
+@import url("../colors.css");
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--blue-3);
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--blue-3);
+  color: var(--text-color);
+  border: 1px solid var(--blue-4);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--blue-4);
+}

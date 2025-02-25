@@ -1,18 +1,35 @@
-{% extends 'home/base.html' %}
-
+{% extends 'base.html' %}
+{% load static %}
 {% block content %}
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trader Motors</title>
+    
 </head>
 <body>
     <h1>Bem-vindo ao Trader Motors</h1>
     <p>Seu marketplace de autopeças inteligentes!</p>
+
+    <form method="get" action="{% url 'MainTM:buscar_automoveis' %}">
+        <input type="text" name="q" placeholder="Buscar automóveis...">
+        <button type="submit">Buscar</button>
+    </form>
+
+
+    <h2>Recomendações para Você</h2>
+    {% if request.user.is_authenticated %}
+        <p>Baseado no seu histórico, aqui estão algumas sugestões:</p>
+        <ul>
+            {% for part in recommended_parts %}
+                <li>{{ part.part_name }} - <a href="#">Ver detalhes</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p><a href="{% url 'MainTM:login' %}">Faça login</a> para ver recomendações personalizadas!</p>
+    {% endif %}
 </body>
 </html>
-
 {% endblock %}

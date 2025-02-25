@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Buscar Peças{% endblock %}
+{% block content %}
+    <h1>Buscar Peças</h1>
+    <form method="get">
+        <input type="text" name="q" placeholder="Buscar..." value="{{ query }}">
+        <button type="submit">Buscar</button>
+    </form>
+    <ul>
+        {% for peca in pecas %}
+            <li><a href="{% url 'MainTM:detalhe_peca' peca.id %}">{{ peca.nome }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

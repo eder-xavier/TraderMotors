@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}{{ automovel.marca }} {{ automovel.modelo }}{% endblock %}
+{% block content %}
+    <h1>{{ automovel.marca }} {{ automovel.modelo }}</h1>
+    <img src="{{ automovel.imagem.url }}" alt="{{ automovel.marca }} {{ automovel.modelo }}" style="max-width: 300px;">
+    <p>Ano: {{ automovel.ano }}</p>
+    <p>Preço: {{ automovel.preco }}</p>
+    <p>Descrição: {{ automovel.descricao }}</p>
+{% endblock %}

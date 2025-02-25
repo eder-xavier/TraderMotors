@@ -1,5 +1,47 @@
+@import url("../colors.css");
 
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+nav {
+  background-color: var(--blue-4);
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--hover-color);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--blue-3);
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }

@@ -1,0 +1,13 @@
+:root {
+    /* Main Palette */
+    --blue-5: #00072d;
+    --blue-4: #001c55;
+    --blue-3: #0a2472;
+    --blue-2: #0e6ba8;
+    --blue-1: #a6e1fa;
+    --background: #3c3c44;
+  
+    /* Extras */
+    --text-color: #ffffe4;
+    --hover-color: rgba(255, 255, 255, 0.2);
+  }

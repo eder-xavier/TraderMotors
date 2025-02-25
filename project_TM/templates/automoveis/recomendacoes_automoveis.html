@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Recomendações{% endblock %}
+{% block content %}
+    <h1>Recomendações de Automóveis</h1>
+    <ul>
+        {% for automovel in recomendacoes %}
+            <li><a href="{% url 'MainTM:detalhe_automovel' automovel.id %}">{{ automovel.marca }} {{ automovel.modelo }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

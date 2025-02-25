@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}{{ peca.nome }}{% endblock %}
+{% block content %}
+    <h1>{{ peca.nome }}</h1>
+    <img src="{{ peca.imagem.url }}" alt="{{ peca.nome }}" style="max-width: 300px;">
+    <p>Preço: {{ peca.preco }}</p>
+    <p>Descrição: {{ peca.descricao }}</p>
+    <h2>Automóveis Compatíveis:</h2>
+    <ul>
+        {% for automovel in peca.automoveis_compatíveis.all %}
+            <li>{{ automovel.marca }} {{ automovel.modelo }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
