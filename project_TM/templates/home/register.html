@@ -1,22 +1,20 @@
-{% extends 'home/base.html' %}
+{% extends 'home/base.html' %} {% block content %} {% load static %}
 
-{% block content %}
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-<h2>Cadastro</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Registrar</button>
-</form>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - TraderMotors</title>
+    <link rel="stylesheet" href="{% static 'css/home/register.css' %}" />
+  </head>
+  <body>
+    <h2>Cadastro</h2>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Registrar</button>
+    </form>
+  </body>
 </html>
+
 {% endblock %}
